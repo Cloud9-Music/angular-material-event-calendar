@@ -1078,7 +1078,7 @@ function utilService($injector, $locale, $filter) {
 
 
   function formatEventTime(date) {
-    return dateFilter(date, 'h:mm a');
+    return date.toLocaleTimeString([], { hour: '2-digit', minute:'2-digit' });
   }
 
 
